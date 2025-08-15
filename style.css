@@ -1,0 +1,410 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Use modern web fonts imported from Google Fonts */
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #2f2f2f;
+  background-color: #f5f6fa;
+  /* Updated colour palette: deep navy for strength, teal for balance and bronze for luxury */
+  --primary: #012A4A;
+  --secondary: #006D77;
+  --accent: #AE7E56;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.main-header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  padding: 2rem 0 2.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Typography for headings */
+.main-header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.main-header .tagline {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  opacity: 0.85;
+  font-weight: 400;
+}
+
+.main-header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.main-header nav a {
+  color: #e3f2fd;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 30px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.main-header nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* Sections */
+section {
+  padding: 2.5rem 0;
+  scroll-margin-top: 80px;
+}
+
+section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.9rem;
+  margin-bottom: 1.2rem;
+  color: var(--primary);
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem;
+  width: 50px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+/* Alternate background colors for sections to aid contrast */
+section:nth-of-type(even) {
+  /* light beige background for alternating sections */
+  background-color: #f9f6f2;
+}
+section:nth-of-type(odd) {
+  /* soft blue-gray background for alternating sections */
+  background-color: #f5f7fb;
+}
+
+/* Companies */
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.company-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.company-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+}
+
+.company-card img {
+  width: 100%;
+  height: 140px;
+  /* Use contain so logos aren’t cropped and keep their aspect ratio. The
+     background helps the logos stand out on cards. */
+  object-fit: contain;
+  background-color: #f7f7f7;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.company-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  color: var(--secondary);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.company-card .summary {
+  font-size: 0.95rem;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  min-height: 3.5rem;
+}
+
+.company-card .details {
+  display: none;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+.company-card .details a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.company-card .toggle {
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.company-card .toggle:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Services */
+/* Services */
+.services ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+.services li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 2rem;
+  line-height: 1.4;
+}
+.services li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Contact */
+.contact form {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.contact label {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.contact button {
+  width: max-content;
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.6rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.contact button:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.main-footer {
+  background: #0d47a1;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Stats section */
+.stats-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.stat p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Mission section */
+.mission {
+  padding: 2rem 0;
+}
+
+.mission-list {
+  list-style: none;
+  margin-top: 1rem;
+  padding-left: 0;
+}
+.mission-list li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.4;
+}
+.mission-list li::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 1rem;
+  top: 0.1rem;
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero section styles */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Override alternating section backgrounds */
+  background-color: transparent;
+}
+
+.hero-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #e1e5ee;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--accent);
+  color: #ffffff;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background: var(--secondary);
+  transform: translateY(-3px);
+}
+
+/* Gallery section */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.gallery-grid figure {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin: 0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gallery-grid figure:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+}
+.gallery-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.gallery-grid figcaption {
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--secondary);
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Override underline color on hero heading */
+.hero h2::after {
+  background: var(--accent);
+}

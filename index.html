@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leonildo S. A. Carneiro | Portal de Empresas</title>
+  <!-- Import Google Fonts for a more contemporary look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <h1>Leonildo&nbsp;Samuel&nbsp;Afonso&nbsp;Carneiro</h1>
+      <p class="tagline">Gestor de empresas&nbsp;e&nbsp;economista</p>
+      <nav>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#empresas">Empresas</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Banner: introduces the portal with a slogan and call-to-action -->
+    <section class="hero">
+      <div class="hero-content container">
+        <h2>Segurança que gera valor: ouro, imóveis e proteção</h2>
+        <p>Riqueza sólida, imóveis valorizados e tranquilidade garantida em um único portal.</p>
+        <a href="#empresas" class="cta-button">Saiba mais</a>
+      </div>
+    </section>
+
+    <!-- Destaques Section: animated statistics highlighting key numbers -->
+    <section id="destaques" class="stats reveal">
+      <div class="container stats-grid">
+        <div class="stat">
+          <span class="stat-number" data-target="3">0</span>
+          <p>Empresas</p>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="50">0</span>
+          <p>Clientes satisfeitos</p>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="12">0</span>
+          <p>Anos de experiência</p>
+        </div>
+
+        <!-- Visitas Section: displays the number of visits using CountAPI -->
+        <div class="stat" id="visitas">
+          <span class="stat-number" id="visit-count">0</span>
+          <p>Visitas</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="about reveal">
+      <div class="container">
+        <h2>Sobre</h2>
+        <p>
+          Sou gestor de empresas e economista com experiência em diversos
+          segmentos de mercado. Meu objetivo é conectar pessoas a
+          oportunidades de negócio, coordenar equipes de alto desempenho e
+          transformar visões em resultados concretos. Neste portal você
+          encontrará as empresas e projetos dos quais faço parte, bem como os
+          serviços que ofereço.
+        </p>
+      </div>
+    </section>
+
+    <!-- Missão e Valores Section -->
+    <section id="missao" class="mission reveal">
+      <div class="container">
+        <h2>Missão &amp; Valores</h2>
+        <p>
+          Nossa missão é elevar padrões de gestão, promover soluções rápidas e
+          personalizadas e transformar visões em realidade. Guiamo‑nos por
+          valores que sustentam todas as nossas iniciativas:
+        </p>
+        <ul class="mission-list">
+          <li><strong>Excelência:</strong> buscamos superar expectativas em
+          cada projeto e serviço.</li>
+          <li><strong>Inovação:</strong> abraçamos criatividade e tecnologia para
+          oferecer soluções diferenciadas.</li>
+          <li><strong>Integridade:</strong> agimos com honestidade e
+          transparência, construindo confiança duradoura.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Empresas Section -->
+    <section id="empresas" class="companies reveal">
+      <div class="container">
+        <h2>Empresas</h2>
+        <p>Conheça as organizações em que atuo e os serviços que oferecemos.</p>
+
+        <div class="company-grid">
+          <!-- Império das Joias -->
+          <div class="company-card" id="card-imperio">
+            <!-- Updated to use the real Império das Joias logo provided by the user -->
+            <img src="images/imperio_logo.png" alt="Império das Joias" />
+            <h3>Império das Joias</h3>
+            <p class="summary">
+              Joalheria angolana especializada em peças de ouro 18K e
+              personalização.
+            </p>
+            <div class="details">
+              <p>
+                Fundada em 2014, a Império das Joias transforma sonhos em
+                joias de ouro 18K. Nossos artesãos criam peças únicas,
+                oferecem serviços de conserto e consultoria para escolha de
+                alianças, anéis e outras joias personalizadas. Atendemos
+                clientes em Luanda com exclusividade e sofisticação.
+              </p>
+            </div>
+            <button class="toggle" aria-expanded="false">Ver mais</button>
+          </div>
+
+          <!-- Makala Imobiliária -->
+          <div class="company-card" id="card-makala">
+            <!-- Updated to use the Makala Imobiliária logo provided by the user -->
+            <img src="images/makala_logo.png" alt="Makala Imobiliária" />
+            <h3>Makala Imobiliária</h3>
+            <p class="summary">
+              Assessoria e corretagem imobiliária para compra, venda e
+              investimento em imóveis.
+            </p>
+            <div class="details">
+              <p>
+                Localizada na Via Expresso em Belas (Pedras de Angola), a
+                Makala Imobiliária reúne os melhores corretores de imóveis
+                locais. Oferecemos consultoria especializada para quem deseja
+                comprar, vender ou investir com inteligência【787824429236999†L61-L68】.
+                Nosso foco é identificar oportunidades que gerem
+                rentabilidade e conforto para nossos clientes.
+              </p>
+            </div>
+            <button class="toggle" aria-expanded="false">Ver mais</button>
+          </div>
+
+          <!-- Global Seguros -->
+          <div class="company-card" id="card-global">
+            <!-- Updated to use the Global Seguros logo provided by the user -->
+            <img src="images/global_logo.png" alt="Global Seguros" />
+            <h3>Global Seguros</h3>
+            <p class="summary">
+              Corretora de seguros angolana que atua em diversos ramos: vida,
+              auto e patrimonial.
+            </p>
+            <div class="details">
+              <p>
+                A Global Seguros – Companhia Angolana de Seguros, S.A. está
+                sediada em Luanda e opera como agente e corretora de seguros.
+                Trabalhamos com produtos de proteção pessoal e empresarial,
+                incluindo seguros de vida, automóvel e património. Nosso
+                objetivo é oferecer segurança financeira e tranquilidade aos
+                nossos clientes por meio de soluções personalizadas【955939995907970†screenshot】.
+                Para saber mais, visite:
+                <a href="https://www.globalseguros.ao" target="_blank"
+                  >globalseguros.ao</a
+                >.
+              </p>
+            </div>
+            <button class="toggle" aria-expanded="false">Ver mais</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="services reveal">
+      <div class="container">
+        <h2>Serviços</h2>
+        <ul>
+          <li>
+            <strong>Consultoria Empresarial:</strong> assessoria para melhoria
+            de processos, estratégia e liderança.
+          </li>
+          <li>
+            <strong>Planejamento Financeiro:</strong> elaboração de estudos
+            econômicos e projeções para negócios.
+          </li>
+          <li>
+            <strong>Corretagem Imobiliária:</strong> mediação de compra,
+            venda e locação de imóveis residenciais e comerciais.
+          </li>
+          <li>
+            <strong>Design de Joias Personalizadas:</strong> criação de
+            alianças, anéis e outras peças exclusivas.
+          </li>
+          <li>
+            <strong>Consultoria em Seguros:</strong> análise de necessidades
+            e indicação de soluções adequadas em seguros de vida, auto e
+            património.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Galeria Section -->
+    <section id="galeria" class="gallery reveal">
+      <div class="container">
+        <h2>Galeria</h2>
+        <p>Alguns exemplos visuais dos serviços que oferecemos e dos setores em que atuamos.</p>
+        <div class="gallery-grid">
+          <figure>
+            <img src="images/gallery_jewelry.png" alt="Joias de Ouro 18K" />
+            <figcaption>Joias de Ouro&nbsp;18K</figcaption>
+          </figure>
+          <figure>
+            <img src="images/gallery_realestate.png" alt="Imóvel moderno" />
+            <figcaption>Imóveis Modernos</figcaption>
+          </figure>
+          <figure>
+            <img src="images/gallery_insurance.png" alt="Proteção e seguros" />
+            <figcaption>Proteção e Seguros</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="contact reveal">
+      <div class="container">
+        <h2>Contato</h2>
+        <p>
+          Para entrar em contato, envie um e‑mail para
+          <a href="mailto:carneiroleo24@gmail.com">carneiroleo24@gmail.com</a> ou
+          preencha o formulário abaixo.
+        </p>
+        <!-- The form uses Formsubmit.co to send submissions directly to the provided email. -->
+        <form id="contact-form" action="https://formsubmit.co/carneiroleo24@gmail.com" method="POST">
+          <input type="hidden" name="_next" value="thanks.html" />
+          <label>
+            Nome<br />
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            E‑mail<br />
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Mensagem<br />
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <p>&copy; 2025 Leonildo S. A. Carneiro. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
